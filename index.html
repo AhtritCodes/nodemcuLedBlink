@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NodeMcu Led Blink </title>
+	<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+	<div id="main-content">
+		<h2>LED Status:</h2>
+		<p id="led-status"></p>
+		<button id="led">Click</button>
+	</div>
+
+
+
+	<script>
+		
+		const ledBtn = document.getElementById('led');
+		var ledStatus = document.getElementById('led-status');
+
+		// console.log(ledBtn);
+		ledBtn.addEventListener('click', (e) => {
+			// e.preventDefault();
+			// console.log('clicked');
+			ledStatus.innerText = '0';
+		})
+
+	</script>
+</body>
+</html>
