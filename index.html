@@ -8,8 +8,8 @@
 </head>
 <body>
 	<div id="main-content">
-		<h2>LED Status:</h2>
-		<p id="led-status"></p>
+		<h2>LED Status: </h2>
+		<p id="led-status">0</p>
 		<button id="led">Click</button>
 	</div>
 
@@ -17,15 +17,18 @@
 
 	<script>
 		
-		const ledBtn = document.getElementById('led');
+		var ledBtn = document.getElementById('led');
 		var ledStatus = document.getElementById('led-status');
 
-		// console.log(ledBtn);
-		ledBtn.addEventListener('click', (e) => {
-			// e.preventDefault();
-			// console.log('clicked');
-			ledStatus.innerText = '0';
-		})
+		ledBtn.onclick = () => {
+			if(ledStatus.innerHTML === '0') {
+				ledStatus.innerHTML = '1';
+				// ledBtn.innerText = 'OFF';
+			}
+			else
+				ledStatus.innerHTML = '0';
+				// ledBtn.innerHTML = 'ON';
+		}
 
 	</script>
 </body>
